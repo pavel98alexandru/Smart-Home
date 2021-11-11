@@ -1,0 +1,76 @@
+@startuml
+set namespaceSeparator ::
+
+class "smart_home::Authentification.dart::Authentification" {
+  -FirebaseAuth _firebaseAuth
+  +Future<UserCredential?> signIn()
+  +Future<void> signOut()
+}
+
+"smart_home::Authentification.dart::Authentification" o-- "firebase_auth::firebase_auth.dart::FirebaseAuth"
+
+class "smart_home::Login.dart::Login" {
+  +Future<void> signInWithGoogle()
+  +Widget build()
+}
+
+class "smart_home::main.dart::MyApp" {
+  +Widget* build()
+}
+
+class "smart_home::main.dart::LoginHandler" {
+  +Widget* build()
+}
+
+class "smart_home::Monitoring.dart::Monitoring" {
+  +_MonitoringState createState()
+}
+
+class "smart_home::Monitoring.dart::_MonitoringState" {
+  +DatabaseReference dataBaseReference
+  +List<String>? receivedData
+  +bool loading
+  -Timer? _timer
+  +double temp
+  +double humid
+  +int ac_status
+  +int heating_status
+  +int security_status
+  +int irrigation_status
+  +double desiredTemp
+  +double irrigationDuration
+  +int fire_detected
+  +int gas_detected
+  +int presence_detected
+  +int fire_detected_copy
+  +int gas_detected_copy
+  +int presence_detected_copy
+  +String sendData
+  +int sendTemp
+  +int sendAC
+  +int sendHeating
+  +int sendIrrigation
+  +int sendSecurity
+  +int sendOpenLock
+  +dynamic myOnTap
+  +void sendDataFirebase()
+  +Future<List<String>> getDataFirebase()
+  +Future<void> signOut()
+  +void initState()
+  -dynamic _generateTrace()
+  -void _showAlert()
+  +Widget build()
+}
+
+"smart_home::Monitoring.dart::_MonitoringState" o-- "firebase_database::firebase_database.dart::DatabaseReference"
+"smart_home::Monitoring.dart::_MonitoringState" o-- "dart::async::Timer"
+
+class "smart_home::TempHumidTemplate.dart::TempHumidTemplate" {
+  +double value
+  +bool temperature_or_humidty
+  +bool shouldRepaint()
+  +void paint()
+}
+
+
+@enduml

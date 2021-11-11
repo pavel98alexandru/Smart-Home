@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1081356738207",
+    "firebase_url": "https://smarthome-cb965-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "smarthome-cb965",
+    "storage_bucket": "smarthome-cb965.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081356738207:android:cbb669a1524d57dfe10caa",
+        "android_client_info": {
+          "package_name": "com.example.smart_home"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081356738207-opr35hsa5ao2ddfpnidu81tf7cdrmh4f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.smart_home",
+            "certificate_hash": "bbf5d0ec5d60622fbf3aca06e8506f51b5034c48"
+          }
+        },
+        {
+          "client_id": "1081356738207-235dv94fb451nfhvobu06cb31b69of78.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBS_nhZFGtcqLn6Yhpp3Vyc_zIGSPl-sfs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081356738207-235dv94fb451nfhvobu06cb31b69of78.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
